@@ -26,3 +26,20 @@ type();
 
 // Footer Year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// Delayed auto-scroll to About section after page load
+window.addEventListener('load', () => {
+  // If user has navigated to a hash or scrolled already, avoid forcing scroll
+  const hasHash = window.location.hash && window.location.hash !== '#';
+  const userScrolled = () => window.scrollY > 10;
+
+  if (hasHash) return;
+
+  setTimeout(() => {
+    if (userScrolled()) return;
+    const about = document.getElementById('about');
+    if (about && typeof about.scrollIntoView === 'function') {
+      about.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, 2500); // ~2.5 seconds
+});
