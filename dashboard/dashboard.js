@@ -15,7 +15,8 @@ const CodingDashboard = (() => {
       name: 'LeetCode',
       icon: '⚡',
       color: '#ffa116',
-      hasDifficulty: true
+      hasDifficulty: true,
+      hasRating: true
     },
     codeforces: {
       name: 'Codeforces',
