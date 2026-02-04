@@ -438,6 +438,11 @@ const CodingDashboard = (() => {
         colors: []
       };
 
+      if (statsData.leetcode?.rating) {
+        ratingsData.labels.push('LeetCode');
+        ratingsData.data.push(statsData.leetcode.rating);
+        ratingsData.colors.push('#ffa116');
+      }
       if (statsData.codeforces?.rating) {
         ratingsData.labels.push('Codeforces');
         ratingsData.data.push(statsData.codeforces.rating);
