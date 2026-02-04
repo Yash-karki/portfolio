@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of Yash Karki – Aspiring Software Developer showcasing projects, skills, and education.">
+  <meta name="description"
+    content="Portfolio of Yash Karki – Aspiring Software Developer showcasing projects, skills, and education.">
   <title>Yash Karki | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,14 +13,17 @@
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="dashboard/dashboard.css">
 </head>
+
 <body>
   <!-- Hero Section -->
   <header class="hero">
     <h1 class="gradient-text">Yash Karki</h1>
     <p id="typing"></p>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/yash-karki-5b407b215" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/yash-karki-5b407b215" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
       <a href="https://github.com/Yash-karki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -34,10 +39,10 @@
   <section class="section" id="about">
     <h2>About Me</h2>
     <p class="about-text">
-      Hi, I’m <b>Yash Karki</b>, a passionate B.Tech CSE student who loves solving problems 
-      and building creative tech solutions. I enjoy working on projects that 
-      combine <span class="highlight">logic, design, and innovation</span>. 
-      My goal is to grow as a developer and contribute to impactful projects in 
+      Hi, I’m <b>Yash Karki</b>, a passionate B.Tech CSE student who loves solving problems
+      and building creative tech solutions. I enjoy working on projects that
+      combine <span class="highlight">logic, design, and innovation</span>.
+      My goal is to grow as a developer and contribute to impactful projects in
       software development and data-driven technologies.
     </p>
   </section>
@@ -85,23 +90,27 @@
       <div class="project-card">
         <h3>Cryptography visualizer</h3>
         <h5>Frontend Project</h5>
-        <p>An interactive web app demonstrating different encryption algorithms (Caesar, Vigenère, Hashing, AES and Stagenography) .</p>
+        <p>An interactive web app demonstrating different encryption algorithms (Caesar, Vigenère, Hashing, AES and
+          Stagenography) .</p>
         <p class="stack">JavaScript | CSS | HTML</p>
-        <a href="https://yash-karki.github.io/Crypto-visualizer/" target="_blank" rel="noopener noreferrer">View Project →</a>
+        <a href="https://yash-karki.github.io/Crypto-visualizer/" target="_blank" rel="noopener noreferrer">View Project
+          →</a>
       </div>
       <div class="project-card">
         <h3>Data Structures and Algorithms Visualizer</h3>
         <h5>Frontend Project</h5>
         <p>A fun tool to visualize sorting and searching algorithms with animations.</p>
         <p class="stack">JavaScript | CSS | HTML</p>
-        <a href="https://yash-karki.github.io/data-structure-visualizer/landing.html" target="_blank" rel="noopener noreferrer">View Project →</a>
+        <a href="https://yash-karki.github.io/data-structure-visualizer/landing.html" target="_blank"
+          rel="noopener noreferrer">View Project →</a>
       </div>
       <div class="project-card">
         <h3>Encryption Decryption Chat App</h3>
         <h5>Frontend project</h5>
         <p>An interactive web app demonstrating how our chat and messages get encrypted and decrypted.</p>
         <p class="stack">JavaScript | CSS | HTML</p>
-        <a href="https://yash-karki.github.io/cryptography-encryption-decryption/" target="_blank" rel="noopener noreferrer">View Project →</a>
+        <a href="https://yash-karki.github.io/cryptography-encryption-decryption/" target="_blank"
+          rel="noopener noreferrer">View Project →</a>
       </div>
       <div class="project-card">
         <h3>Krishi Connect</h3>
@@ -128,7 +137,8 @@
     <h2>Let’s Connect & Create Together!</h2>
     <p>I’m always open to learning, collaborating, and building impactful solutions.</p>
     <div class="socials">
-      <a href="https://www.linkedin.com/in/yash-karki-5b407b215" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+      <a href="https://www.linkedin.com/in/yash-karki-5b407b215" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
       <a href="https://github.com/Yash-karki" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -140,11 +150,24 @@
     </div>
   </section>
 
+  <!-- Coding Profile Dashboard (NEW SECTION) -->
+  <section class="section dark" id="coding-dashboard">
+    <h2>Coding Profile Dashboard</h2>
+    <div id="cpd-root">
+      <p class="cpd-loading">Loading coding statistics...</p>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer>
-    © <span id="year"></span> Yash Karki | 
+    © <span id="year"></span> Yash Karki |
     <a href="https://www.linkedin.com/in/yash-karki-5b407b215" target="_blank" rel="noopener noreferrer">LinkedIn</a> ·
     <a href="https://github.com/Yash-karki" target="_blank" rel="noopener noreferrer">GitHub</a>
   </footer>
+
+  <!-- Dashboard Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="dashboard/dashboard.js" defer></script>
 </body>
+
 </html>

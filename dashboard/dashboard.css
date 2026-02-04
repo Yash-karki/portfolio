@@ -1,0 +1,382 @@
+/* ============================================
+   CODING PROFILE DASHBOARD - SCOPED STYLES
+   All classes prefixed with 'cpd-' to avoid conflicts
+   ============================================ */
+
+/* Dashboard Container */
+#cpd-root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.cpd-loading {
+  text-align: center;
+  color: #888;
+  padding: 60px 20px;
+  font-size: 1.1rem;
+}
+
+.cpd-error {
+  text-align: center;
+  color: #ff6b6b;
+  padding: 40px 20px;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+/* Stats Grid */
+.cpd-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+/* Platform Cards */
+.cpd-platform-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cpd-platform-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+.cpd-platform-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cpd-platform-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.cpd-platform-icon.leetcode { background: linear-gradient(135deg, #ffa116, #ff6b35); }
+.cpd-platform-icon.codeforces { background: linear-gradient(135deg, #1890ff, #0050b3); }
+.cpd-platform-icon.codechef { background: linear-gradient(135deg, #5b4638, #8b6914); }
+.cpd-platform-icon.geeksforgeeks { background: linear-gradient(135deg, #2f8d46, #1a5c2e); }
+
+.cpd-platform-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.cpd-platform-username {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+/* Stats Display */
+.cpd-stats-main {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.cpd-stats-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cpd-stats-label {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Difficulty Breakdown */
+.cpd-difficulty-bar {
+  display: flex;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #333;
+}
+
+.cpd-difficulty-segment {
+  transition: width 0.5s ease;
+}
+
+.cpd-difficulty-segment.easy { background: #00b8a3; }
+.cpd-difficulty-segment.medium { background: #ffc01e; }
+.cpd-difficulty-segment.hard { background: #ff375f; }
+
+.cpd-difficulty-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.cpd-difficulty-labels span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cpd-difficulty-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.cpd-difficulty-dot.easy { background: #00b8a3; }
+.cpd-difficulty-dot.medium { background: #ffc01e; }
+.cpd-difficulty-dot.hard { background: #ff375f; }
+
+/* Rating Display */
+.cpd-rating-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #333;
+  margin-top: 15px;
+}
+
+.cpd-rating-value {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.cpd-rating-rank {
+  font-size: 0.85rem;
+  color: #a855f7;
+  text-transform: capitalize;
+}
+
+/* Charts Section */
+.cpd-charts-section {
+  margin-bottom: 40px;
+}
+
+.cpd-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cpd-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.cpd-chart-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.15);
+}
+
+.cpd-chart-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ccc;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.cpd-chart-wrapper {
+  position: relative;
+  height: 200px;
+}
+
+/* Heatmap Section */
+.cpd-heatmap-section {
+  margin-bottom: 40px;
+}
+
+.cpd-heatmap-container {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(236, 72, 153, 0.2);
+  overflow-x: auto;
+}
+
+.cpd-heatmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cpd-heatmap-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.cpd-heatmap-stats {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.cpd-heatmap-stats strong {
+  color: #a855f7;
+}
+
+/* Heatmap Grid */
+.cpd-heatmap-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cpd-heatmap-months {
+  display: flex;
+  padding-left: 35px;
+  margin-bottom: 5px;
+}
+
+.cpd-heatmap-month {
+  font-size: 0.7rem;
+  color: #888;
+  flex: 1;
+  min-width: 40px;
+}
+
+.cpd-heatmap-row {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.cpd-heatmap-day-label {
+  width: 30px;
+  font-size: 0.7rem;
+  color: #888;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.cpd-heatmap-cells {
+  display: flex;
+  gap: 3px;
+  flex-wrap: nowrap;
+}
+
+.cpd-heatmap-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background: #161b22;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.cpd-heatmap-cell:hover {
+  transform: scale(1.3);
+}
+
+/* Heatmap color levels */
+.cpd-heatmap-cell[data-level="0"] { background: #161b22; }
+.cpd-heatmap-cell[data-level="1"] { background: #0e4429; }
+.cpd-heatmap-cell[data-level="2"] { background: #006d32; }
+.cpd-heatmap-cell[data-level="3"] { background: #26a641; }
+.cpd-heatmap-cell[data-level="4"] { background: #39d353; }
+
+/* Heatmap Legend */
+.cpd-heatmap-legend {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5px;
+  margin-top: 15px;
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.cpd-legend-cell {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* Tooltip */
+.cpd-tooltip {
+  position: fixed;
+  background: #1f1f1f;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border: 1px solid #333;
+  display: none;
+}
+
+.cpd-tooltip.visible {
+  display: block;
+}
+
+/* Platform Status Indicator */
+.cpd-status-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.cpd-status-indicator.success { background: #00b8a3; }
+.cpd-status-indicator.partial { background: #ffc01e; }
+.cpd-status-indicator.failed { background: #ff375f; }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cpd-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cpd-charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cpd-heatmap-container {
+    padding: 15px;
+  }
+  
+  .cpd-heatmap-cell {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .cpd-heatmap-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
